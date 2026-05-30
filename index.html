@@ -3,127 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Scrapper - Know your world rule world</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>News Scrapper - Let's Get <br> Started</title>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 
 <body>
-    <main class="container">
-        <!-- Left: Headline + Auth -->
-        <section class="auth-column">
-            <h1 class="headline">Know your world rule world</h1>
+    <!-- Top nav bar -->
+    <nav class="topbar">
+        <a href="#" class="brand" aria-label="News Scrapper home">
+            <img src="logo_2.png" alt="News Scrapper logo" class="brand-logo"
+                 onerror="this.style.opacity=0.2; this.alt='NS logo placeholder';">
+            <span class="brand-name">News&nbsp;Scrapper</span>
+        </a>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode">
+                <!-- Moon outline (light mode default) -->
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <!-- Sun (dark mode) -->
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+                </svg>
+                <!-- Filled crescent (third state) -->
+                <svg class="icon-crescent" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+            <button class="close-btn" aria-label="Close">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </nav>
 
-            <div class="auth-stack">
-                <!-- Continue with Google -->
-                <a href="#" class="pill-btn" aria-label="Continue with Google">
+    <!-- Main card -->
+    <main class="container">
+        <section class="auth-card">
+            <h1 class="headline">Let's Get <br> Started</h1>
+
+            <p class="subtitle">
+                Already have an account? <a href="#" class="login-link">Login</a>
+            </p>
+
+            <!-- Email input -->
+            <div class="input-group">
+                <label for="email" class="field-label">Email Address</label>
+                <div class="input-wrap">
+                    <span class="input-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                            <path d="m3 7 9 6 9-6"></path>
+                        </svg>
+                    </span>
+                    <input type="text" id="email" class="email-input" placeholder="Enter your email address" aria-label="Email Address" autocomplete="off">
+                </div>
+            </div>
+
+            <!-- Next button -->
+            <button class="next-btn" id="continueBtn" disabled>
+                <span>Next</span>
+                <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </button>
+
+            <!-- OR divider -->
+            <div class="divider">Or Sign up</div>
+
+            <!-- Social buttons -->
+            <div class="social-row">
+                <a href="#" class="social-btn" aria-label="Login with Google">
                     <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                         <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
                         <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
                         <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
                         <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
                     </svg>
-                    Continue with Google
+                    <span>Google</span>
                 </a>
 
-                <!-- Continue with Apple -->
-                <a href="#" class="pill-btn" aria-label="Continue with Apple">
+                <a href="#" class="social-btn" aria-label="Login with Apple">
                     <svg viewBox="0 0 24 24" fill="#000000" xmlns="http://www.w3.org/2000/svg">
                         <path d="M17.05 12.04c-.03-3.16 2.58-4.68 2.7-4.75-1.47-2.15-3.76-2.44-4.57-2.47-1.94-.2-3.79 1.14-4.78 1.14-.98 0-2.5-1.12-4.11-1.09-2.11.03-4.06 1.23-5.15 3.12-2.2 3.81-.56 9.45 1.58 12.54 1.05 1.51 2.3 3.21 3.92 3.15 1.57-.06 2.17-1.02 4.07-1.02 1.9 0 2.44 1.02 4.11.99 1.7-.03 2.77-1.54 3.81-3.06 1.2-1.75 1.69-3.45 1.72-3.53-.04-.02-3.3-1.27-3.33-5.04zM14.13 3.83c.87-1.05 1.46-2.51 1.3-3.97-1.25.05-2.77.83-3.67 1.88-.81.93-1.51 2.42-1.32 3.85 1.39.11 2.81-.71 3.69-1.76z"/>
                     </svg>
-                    Continue with Apple
+                    <span>Apple</span>
                 </a>
 
-                <!-- Continue with phone -->
-                <a href="#" class="pill-btn" aria-label="Continue with phone">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                <a href="#" class="social-btn" aria-label="Login with Facebook">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#1877F2" d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07c0 6.02 4.39 11.01 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.69.24 2.69.24v2.97h-1.52c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.08 24 18.1 24 12.07z"/>
                     </svg>
-                    Continue with phone
+                    <span>Facebook</span>
                 </a>
             </div>
-
-            <!-- OR divider -->
-            <div class="divider">or</div>
-
-            <!-- Email input -->
-            <div class="input-group">
-                <input type="text" id="email" class="email-input" placeholder=" " aria-label="Email or username" autocomplete="off">
-                <label for="email">Email or username</label>
-            </div>
-            
-            <br>
-
-            <!-- Continue button -->
-            <button class="continue-btn" id="continueBtn" disabled>Continue</button>
 
             <!-- Fine print -->
             <p class="fine-print">
-                By continuing, you agree to our <a href="#">Terms of Service</a>,
-                <a href="#">Privacy Policy</a> and Cookie Use.
+                By registering, you accept News Scrapper
+                <a href="#">Terms of service</a> and <a href="#">Privacy policy</a>
             </p>
-        </section>
-
-        <!-- Right: NS Logo -->
-        <section class="logo-column">
-            <!-- Replace src with your real transparent PNG, e.g. "assets/ns-logo.png" -->
-            <img src="ns_logo.png" alt="News Scrapper NS monogram logo" class="ns-logo"
-                 onerror="this.style.opacity=0.15; this.alt='NS logo placeholder — drop your file at assets/ns-logo.png';">
         </section>
     </main>
 
-    <!-- Footer (carried over from v1, restyled for dark theme) -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-left">
-                <div class="footer-icons">
-                    <a href="#" class="footer-icon" title="Instagram" aria-label="Instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="#" class="footer-icon" title="X (Twitter)" aria-label="X (Twitter)">
-                        <i class="fa-brands fa-x-twitter"></i>
-                    </a>
-                    <a href="#" class="footer-icon" title="TikTok" aria-label="TikTok">
-                        <i class="fa-brands fa-tiktok"></i>
-                    </a>
-                    <a href="#" class="footer-icon" title="Email" aria-label="Email">
-                        <i class="fa-solid fa-envelope"></i>
-                    </a>
-                    <a href="#" class="footer-icon" title="Telephone" aria-label="Telephone">
-                        <i class="fa-solid fa-phone"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="footer-right">
-                <a href="#">About Us</a>
-                <span class="footer-separator">|</span>
-                <a href="#">Terms of Service</a>
-                <span class="footer-separator">|</span>
-                <a href="#">Privacy Policy</a>
-                <span class="footer-separator">|</span>
-                <a href="#">Guidelines</a>
-                <span class="footer-separator">|</span>
-                <a href="#">Contact Us</a><br>
-                <span class="footer-separator">|</span>
-                <span>&copy; 2026 News Scrapper Ltd.</span>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Enable the Continue button only when the input has text
-        const emailInput = document.getElementById('email');
-        const continueBtn = document.getElementById('continueBtn');
-
-        emailInput.addEventListener('input', () => {
-            if (emailInput.value.trim().length > 0) {
-                continueBtn.classList.add('active');
-                continueBtn.removeAttribute('disabled');
-            } else {
-                continueBtn.classList.remove('active');
-                continueBtn.setAttribute('disabled', '');
-            }
-        });
-    </script>
+    <script src="index.js" defer></script>
 </body>
 </html>
